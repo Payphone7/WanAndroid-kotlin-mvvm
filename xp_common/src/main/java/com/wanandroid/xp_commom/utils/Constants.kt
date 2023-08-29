@@ -1,0 +1,20 @@
+package com.wanandroid.xp_commom.utils
+
+/**
+ * create time : 2023/8/29 11:23
+ * create by : xupengpeng
+ */
+
+class Constants {
+    companion object{
+        const val HTTP_SUCCESS = 0
+
+        const val HTTP_AUTH_INVALID = -1001
+
+
+
+        //kv
+        const val USER_NAME: String = "user_name"
+        const val USER_COOKIE: String = "user_cookie"
+    }
+}
