@@ -1,3 +1,4 @@
 rootProject.name = "WanAndroid"
 include ':app'
 include ':xp_common'
+include ':xp_home'

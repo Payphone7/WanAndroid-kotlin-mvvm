@@ -5,6 +5,7 @@ import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import com.gyf.immersionbar.ImmersionBar
 
 /**
  * Author by xupengpeng
@@ -19,9 +20,14 @@ abstract class BaseActivity<DB : ViewDataBinding> : AppCompatActivity() ,AbsInte
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        ImmersionBar.with(this).init()
         mBinding = DataBindingUtil.setContentView(this,getLayoutId())
         init()
         observer()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
 
 
