@@ -14,7 +14,6 @@
 
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
-        <item name="android:windowBackground">@drawable/splash_windows_background</item>
     </style>
 
     <style name="style_bnv_tx">
