@@ -1,0 +1,14 @@
+apply plugin: 'com.android.library'
+apply from: '../dependencies.gradle'
+
+
+android {
+    namespace 'com.wanandroid.xp_home'
+}
+
+dependencies {
+    implementation project(path: ':xp_common')
+    implementation 'io.github.youth5201314:banner:2.2.2'
+
+
+}

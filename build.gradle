@@ -5,7 +5,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        //maven { url 'app_plugin_repo' }
+        maven { url "https://s01.oss.sonatype.org/content/groups/public" }
     }
 
     dependencies {
@@ -20,6 +20,7 @@ allprojects {
         google()
         mavenCentral()
         maven { url 'https://www.jitpack.io' }
+        maven { url "https://s01.oss.sonatype.org/content/groups/public" }
     }
 }
 

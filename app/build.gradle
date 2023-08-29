@@ -26,4 +26,5 @@ android {
 
 dependencies {
     implementation project(path: ':xp_common')
+    implementation project(path: ':xp_home')
 }
