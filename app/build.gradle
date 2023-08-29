@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+apply from: '../dependencies.gradle'
+
+
+
+
+
+
+android {
+    defaultConfig {
+        applicationId "com.xp.wanandroid"
+    }
+
+    buildTypes {
+        debug{
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            //signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+
+dependencies {
+
+}
