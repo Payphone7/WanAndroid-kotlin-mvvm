@@ -8,40 +8,42 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <com.youth.banner.Banner
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/banner"
+            app:banner_indicator_marginBottom="4dp"
+            app:banner_indicator_height="10dp"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            />
         <com.wanandroid.xp_commom.widget.MySmartRefreshLayout
+            app:layout_constraintTop_toBottomOf="@id/banner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:id="@+id/refreshLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            app:layout_constraintVertical_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp">
 
 
-                <com.youth.banner.Banner
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:id="@+id/banner"
-                    app:banner_indicator_marginBottom="4dp"
-                    app:banner_indicator_height="10dp"
-                    android:layout_width="0dp"
-                    android:layout_height="180dp"
-                    />
+
+
 
 
                 <androidx.recyclerview.widget.RecyclerView
-                    app:layout_constraintTop_toBottomOf="@id/banner"
                     android:id="@+id/recyclerView"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_height="0dp"
+                    android:layout_height="match_parent"
                     app:layout_constraintVertical_weight="1"
                     />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.wanandroid.xp_commom.widget.MySmartRefreshLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

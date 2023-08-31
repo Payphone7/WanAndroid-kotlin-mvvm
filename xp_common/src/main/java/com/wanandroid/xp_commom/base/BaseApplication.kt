@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import android.util.Log
+import com.alibaba.android.arouter.launcher.ARouter
 import com.tencent.mmkv.MMKV
 import com.wanandroid.xp_commom.utils.ToastUtil
 
@@ -35,6 +36,7 @@ open class BaseApplication : Application() {
     private fun registerActivityLifecycleCallbacks() {
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
             override fun onActivityCreated(activity: Activity, p1: Bundle?) {
+                ARouter.getInstance().inject(activity)
                 Log.d(TAG, "onActivityCreated: " + activity.javaClass.simpleName)
             }
 

@@ -2,12 +2,14 @@ package com.wanandroid.xp_home.fragment
 
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alibaba.android.arouter.launcher.ARouter
 import com.dycw.xp_home.bean.ArticleBean
 import com.dycw.xp_home.bean.BannerBean
 import com.scwang.smart.refresh.layout.api.RefreshLayout
 import com.scwang.smart.refresh.layout.listener.OnRefreshLoadMoreListener
 import com.wanandroid.xp_commom.base.BaseFragment
 import com.wanandroid.xp_commom.network.BaseStateObserver
+import com.wanandroid.xp_commom.utils.Constants
 import com.wanandroid.xp_commom.utils.ToastUtil
 import com.wanandroid.xp_home.R
 import com.wanandroid.xp_home.adapter.HomeAdapter
@@ -104,12 +106,12 @@ open class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun init() {
         mAdapter = HomeAdapter(object : HomeItemClickListener {
             override fun onItemClick(position: Int) {
-//                val data = list[position]
-//                ARouter.getInstance()
-//                    .build(Constants.PATH_WEB)
-//                    .withString(Constants.WEB_LINK, data.link)
-//                    .withString(Constants.WEB_TITLE, data.title)
-//                    .navigation()
+                val data = list[position]
+                ARouter.getInstance()
+                    .build(Constants.PATH_WEB)
+                    .withString(Constants.WEB_LINK, data.link)
+                    .withString(Constants.WEB_TITLE, data.title)
+                    .navigation()
             }
 
             override fun onCollectClick(position: Int) {

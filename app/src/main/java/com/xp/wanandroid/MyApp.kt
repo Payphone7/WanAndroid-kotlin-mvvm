@@ -2,6 +2,7 @@ package com.xp.wanandroid
 
 import android.app.Application
 import android.content.Context
+import com.alibaba.android.arouter.launcher.ARouter
 import com.tencent.mmkv.MMKV
 import com.wanandroid.xp_commom.base.BaseApplication
 
@@ -17,11 +18,11 @@ class MyApp : BaseApplication() {
 
     override fun onCreate() {
         super.onCreate()
-
+        initARouter()
     }
 
-    private fun initMMKV() {
-        MMKV.initialize(this)
+    private fun initARouter() {
+        ARouter.init(this)
     }
 
 

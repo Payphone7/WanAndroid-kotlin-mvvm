@@ -1,0 +1,13 @@
+apply plugin: 'com.android.library'
+apply from: '../dependencies.gradle'
+
+
+android {
+    namespace 'com.wanandroid.xp_eb'
+}
+
+dependencies {
+    implementation project(path: ':xp_common')
+
+
+}
