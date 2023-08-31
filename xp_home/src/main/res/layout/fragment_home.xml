@@ -5,45 +5,45 @@
     <data>
 
     </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
+        <com.wanandroid.xp_commom.widget.MySmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.google.android.material.appbar.AppBarLayout
-                    android:background="#df3031"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
-                    <com.youth.banner.Banner
-                        android:id="@+id/banner"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:minHeight="50dp"
-                        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
+                <com.youth.banner.Banner
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/banner"
+                    app:banner_indicator_marginBottom="4dp"
+                    app:banner_indicator_height="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    />
 
-                    <androidx.appcompat.widget.Toolbar
-                        android:id="@+id/toolbar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </com.google.android.material.appbar.AppBarLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
+                    app:layout_constraintTop_toBottomOf="@id/banner"
                     android:id="@+id/recyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                    android:layout_width="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintVertical_weight="1"
+                    />
 
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-
-
-
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.wanandroid.xp_commom.widget.MySmartRefreshLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </layout>

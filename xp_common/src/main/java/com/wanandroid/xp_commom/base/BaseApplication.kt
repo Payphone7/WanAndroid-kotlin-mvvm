@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import android.util.Log
+import com.tencent.mmkv.MMKV
 import com.wanandroid.xp_commom.utils.ToastUtil
 
 /**
@@ -20,6 +21,11 @@ open class BaseApplication : Application() {
         super.onCreate()
         registerActivityLifecycleCallbacks()
         initToast()
+        initMMKV()
+    }
+
+    private fun initMMKV() {
+        MMKV.initialize(this)
     }
 
     private fun initToast() {

@@ -2,6 +2,7 @@ package com.wanandroid.xp_commom.base
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,6 +41,11 @@ abstract class BaseFragment <DB : ViewDataBinding> : LazyFragment(),AbsInterface
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+    }
+
+    override fun lazyInit() {
+        Log.d(TAG, "lazyInit: ")
         init()
         observer()
     }

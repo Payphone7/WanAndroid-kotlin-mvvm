@@ -36,6 +36,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             offscreenPageLimit = 1
             adapter = pagerAdapter
         }
+        mBinding.tvName.text="首页"
 
     }
 
@@ -43,20 +44,24 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         mBinding.bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.home ->{
+                    mBinding.tvName.text="首页"
                     mBinding.viewPager.currentItem = 0
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.project ->{
+                    mBinding.tvName.text="项目"
                     mBinding.viewPager.currentItem = 1
                     return@setOnNavigationItemSelectedListener true
 
                 }
                 R.id.navigation ->{
+                    mBinding.tvName.text="导航"
                     mBinding.viewPager.currentItem = 2
                     return@setOnNavigationItemSelectedListener true
 
                 }
                 R.id.mine ->{
+                    mBinding.tvName.text="我的"
                     mBinding.viewPager.currentItem = 3
                     return@setOnNavigationItemSelectedListener true
 

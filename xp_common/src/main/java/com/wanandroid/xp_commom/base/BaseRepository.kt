@@ -1,5 +1,6 @@
 package com.wanandroid.xp_commom.base
 
+import com.alibaba.android.arouter.launcher.ARouter
 import com.wanandroid.xp_commom.network.*
 import com.wanandroid.xp_commom.utils.Constants
 import com.wanandroid.xp_commom.utils.ToastUtil
@@ -26,6 +27,9 @@ open class BaseRepository {
                 }
                 Constants.HTTP_AUTH_INVALID ->{
                     result.resState = ResponseState.REQUEST_FAILED_LOGIN
+                    ToastUtil.instance.showMsg("请先登录")
+//                    ARouter.getInstance().build(Constants.PATH_LOGIN).navigation()
+
                 }
                 else ->{
                     result.resState = ResponseState.REQUEST_ERROR

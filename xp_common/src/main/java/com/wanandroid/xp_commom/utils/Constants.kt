@@ -16,5 +16,12 @@ class Constants {
         //kv
         const val USER_NAME: String = "user_name"
         const val USER_COOKIE: String = "user_cookie"
+
+        //arouter
+        const val WEB_TITLE: String = "web_title"
+        const val WEB_LINK: String = "web_link"
+        const val PATH_WEB: String = "/xp_web/ui/WebActivity"
+        const val PATH_LOGIN: String = "/xp_user/ui/LoginActivity"
+
     }
 }

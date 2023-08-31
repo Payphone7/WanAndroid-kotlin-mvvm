@@ -12,7 +12,7 @@ import android.widget.Toast
 //object ToastUtil
 class ToastUtil private constructor(){
 
-    lateinit var mContext: Application
+    private lateinit var mContext: Application
 
     companion object{
         val instance: ToastUtil by lazy (LazyThreadSafetyMode.SYNCHRONIZED){
