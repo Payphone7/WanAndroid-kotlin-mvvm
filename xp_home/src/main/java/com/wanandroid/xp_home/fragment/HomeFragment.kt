@@ -2,6 +2,8 @@ package com.wanandroid.xp_home.fragment
 
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alibaba.android.arouter.facade.Postcard
+import com.alibaba.android.arouter.facade.callback.NavigationCallback
 import com.alibaba.android.arouter.launcher.ARouter
 import com.dycw.xp_home.bean.ArticleBean
 import com.dycw.xp_home.bean.BannerBean
@@ -57,7 +59,7 @@ open class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         })
 
 
-        mViewModel.collectLiveData.observe(this,object : BaseStateObserver<String>(){
+        mViewModel.collectLiveData.observe(this, object : BaseStateObserver<String>() {
             override fun getRespDataSuccess(it: String) {
                 super.getRespDataSuccess(it)
                 if (list[collectPosition].collect) {
@@ -72,7 +74,7 @@ open class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         })
 
 
-        mViewModel.articleLiveData.observe(this,object : BaseStateObserver<ArticleBean>(){
+        mViewModel.articleLiveData.observe(this, object : BaseStateObserver<ArticleBean>() {
             override fun getRespDataSuccess(it: ArticleBean) {
                 super.getRespDataSuccess(it)
                 it.apply {
@@ -111,7 +113,28 @@ open class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     .build(Constants.PATH_WEB)
                     .withString(Constants.WEB_LINK, data.link)
                     .withString(Constants.WEB_TITLE, data.title)
-                    .navigation()
+                    .navigation(mContext, object : NavigationCallback {
+                        override fun onFound(postcard: Postcard?) {
+                            ToastUtil.instance.showMsg("onFound")
+
+                        }
+
+                        override fun onLost(postcard: Postcard?) {
+                            ToastUtil.instance.showMsg("onLost")
+
+                        }
+
+                        override fun onArrival(postcard: Postcard?) {
+                            ToastUtil.instance.showMsg("onArrival")
+
+                        }
+
+                        override fun onInterrupt(postcard: Postcard?) {
+                            ToastUtil.instance.showMsg("onInterrupt")
+
+                        }
+
+                    })
             }
 
             override fun onCollectClick(position: Int) {

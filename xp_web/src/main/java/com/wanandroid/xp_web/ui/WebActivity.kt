@@ -1,10 +1,8 @@
-package com.wanandroid.xp_web
+package com.wanandroid.xp_web.ui
 
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.webkit.WebChromeClient
@@ -15,8 +13,8 @@ import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.wanandroid.xp_commom.base.BaseActivity
 import com.wanandroid.xp_commom.utils.Constants
-import com.wanandroid.xp_eb.R
-import com.wanandroid.xp_eb.databinding.ActivityWebBinding
+import com.wanandroid.xp_web.R
+import com.wanandroid.xp_web.databinding.ActivityWebBinding
 
 
 @Route(path = Constants.PATH_WEB)
@@ -73,7 +71,6 @@ class WebActivity : BaseActivity<ActivityWebBinding>() {
                 return false
             }
         }
-
         webView.webChromeClient = object : WebChromeClient() {
             override fun onProgressChanged(view: WebView?, newProgress: Int) {
                 Log.d(TAG, "onProgressChanged: $newProgress")

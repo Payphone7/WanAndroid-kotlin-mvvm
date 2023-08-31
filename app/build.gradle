@@ -28,4 +28,5 @@ dependencies {
     implementation project(path: ':xp_common')
     implementation project(path: ':xp_home')
     implementation project(path: ':xp_web')
+    implementation project(path: ':xp_mine')
 }

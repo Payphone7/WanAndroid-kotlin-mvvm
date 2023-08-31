@@ -28,7 +28,7 @@ open class BaseRepository {
                 Constants.HTTP_AUTH_INVALID ->{
                     result.resState = ResponseState.REQUEST_FAILED_LOGIN
                     ToastUtil.instance.showMsg("请先登录")
-//                    ARouter.getInstance().build(Constants.PATH_LOGIN).navigation()
+                    ARouter.getInstance().build(Constants.PATH_LOGIN).navigation()
 
                 }
                 else ->{

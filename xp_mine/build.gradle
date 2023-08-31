@@ -3,9 +3,10 @@ apply from: '../dependencies.gradle'
 
 
 android {
-    namespace 'com.wanandroid.xp_web'
+    namespace 'com.wanandroid.xp_mine'
 }
 
 dependencies {
     implementation project(path: ':xp_common')
+
 }

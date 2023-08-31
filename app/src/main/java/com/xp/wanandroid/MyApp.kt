@@ -22,6 +22,10 @@ class MyApp : BaseApplication() {
     }
 
     private fun initARouter() {
+        if (BuildConfig.DEBUG) {
+            ARouter.openLog()
+            ARouter.openDebug()
+        }
         ARouter.init(this)
     }
 
