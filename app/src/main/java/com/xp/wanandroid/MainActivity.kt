@@ -9,6 +9,7 @@ import com.dycw.base.fragment.adapter.FragmentLazyPagerAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.wanandroid.xp_commom.base.BaseActivity
 import com.wanandroid.xp_home.fragment.HomeFragment
+import com.wanandroid.xp_project.ui.ProjectFragment
 import com.xp.wanandroid.databinding.ActivityMainBinding
 
 
@@ -16,7 +17,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private var fragmentList: MutableList<Fragment> = mutableListOf(
         HomeFragment(),
-        HomeFragment(),
+        ProjectFragment(),
         HomeFragment(),
         HomeFragment()
     )
@@ -33,7 +34,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             setList(fragmentList)
         }
         mBinding.viewPager.apply {
-            offscreenPageLimit = 1
+            offscreenPageLimit = 4
             adapter = pagerAdapter
         }
         mBinding.tvName.text="首页"

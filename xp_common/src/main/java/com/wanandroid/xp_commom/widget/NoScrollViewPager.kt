@@ -36,4 +36,8 @@ class NoScrollViewPager(context: Context,attr: AttributeSet) : ViewPager(context
     fun setScrollAble(scroll: Boolean){
         scrollable = scroll
     }
+
+    override fun setCurrentItem(item: Int) {
+        super.setCurrentItem(item,false)
+    }
 }
