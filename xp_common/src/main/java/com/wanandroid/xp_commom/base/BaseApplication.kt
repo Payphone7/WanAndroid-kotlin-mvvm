@@ -36,7 +36,7 @@ open class BaseApplication : Application() {
     private fun registerActivityLifecycleCallbacks() {
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
             override fun onActivityCreated(activity: Activity, p1: Bundle?) {
-//                ARouter.getInstance().inject(activity)
+                ARouter.getInstance().inject(activity)
                 Log.d(TAG, "onActivityCreated: " + activity.javaClass.simpleName)
             }
 

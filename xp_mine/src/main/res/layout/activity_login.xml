@@ -82,6 +82,7 @@
                     style="@style/edit_login"
                     android:background="@drawable/shape_10dp_white"
                     android:gravity="center"
+                    android:inputType="phone"
                     android:hint="请输入账号" />
 
                 <EditText
@@ -90,6 +91,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     android:id="@+id/etPassWord"
                     style="@style/edit_login"
+                    android:inputType="textPassword"
                     android:background="@drawable/shape_10dp_white"
                     android:gravity="center"
                     android:hint="请输入密码" />

@@ -60,8 +60,8 @@ open class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
 
         mViewModel.collectLiveData.observe(this, object : BaseStateObserver<String>() {
-            override fun getRespDataSuccess(it: String) {
-                super.getRespDataSuccess(it)
+            override fun getRespSuccess() {
+                super.getRespSuccess()
                 if (list[collectPosition].collect) {
                     ToastUtil.instance.showMsg("取消收藏！")
                     list[collectPosition].collect = false
@@ -113,28 +113,7 @@ open class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     .build(Constants.PATH_WEB)
                     .withString(Constants.WEB_LINK, data.link)
                     .withString(Constants.WEB_TITLE, data.title)
-                    .navigation(mContext, object : NavigationCallback {
-                        override fun onFound(postcard: Postcard?) {
-                            ToastUtil.instance.showMsg("onFound")
-
-                        }
-
-                        override fun onLost(postcard: Postcard?) {
-                            ToastUtil.instance.showMsg("onLost")
-
-                        }
-
-                        override fun onArrival(postcard: Postcard?) {
-                            ToastUtil.instance.showMsg("onArrival")
-
-                        }
-
-                        override fun onInterrupt(postcard: Postcard?) {
-                            ToastUtil.instance.showMsg("onInterrupt")
-
-                        }
-
-                    })
+                    .navigation()
             }
 
             override fun onCollectClick(position: Int) {
