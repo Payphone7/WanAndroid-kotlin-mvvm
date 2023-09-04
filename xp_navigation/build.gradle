@@ -1,0 +1,11 @@
+apply plugin: 'com.android.library'
+apply from: '../dependencies.gradle'
+
+
+android {
+    namespace 'com.wanandroid.xp_navigation'
+}
+
+dependencies {
+    implementation project(path: ':xp_common')
+}

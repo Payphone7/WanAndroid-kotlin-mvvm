@@ -9,6 +9,7 @@ import com.dycw.base.fragment.adapter.FragmentLazyPagerAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.wanandroid.xp_commom.base.BaseActivity
 import com.wanandroid.xp_home.fragment.HomeFragment
+import com.wanandroid.xp_navigation.ui.NaviFragment
 import com.wanandroid.xp_project.ui.ProjectFragment
 import com.xp.wanandroid.databinding.ActivityMainBinding
 
@@ -18,7 +19,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private var fragmentList: MutableList<Fragment> = mutableListOf(
         HomeFragment(),
         ProjectFragment(),
-        HomeFragment(),
+        NaviFragment(),
         HomeFragment()
     )
 

@@ -30,4 +30,5 @@ dependencies {
     implementation project(path: ':xp_web')
     implementation project(path: ':xp_mine')
     implementation project(path: ':xp_project')
+    implementation project(path: ':xp_navigation')
 }
