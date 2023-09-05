@@ -5,6 +5,7 @@
     <application>
         <activity
             android:name="com.wanandroid.xp_mine.ui.LoginActivity"
+            android:screenOrientation="portrait"
              />
     </application>
 
