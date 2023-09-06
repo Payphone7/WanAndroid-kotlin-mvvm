@@ -2,8 +2,10 @@ package com.wanandroid.xp_mine.api
 
 import com.wanandroid.xp_commom.network.BaseRes
 import com.wanandroid.xp_mine.bean.LoginBean
+import com.wanandroid.xp_room.bean.UserInfoData
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 /**
@@ -15,4 +17,7 @@ interface UserApi {
     @FormUrlEncoded
     @POST("user/login")
     suspend fun login(@Field("username") username: String, @Field("password") password: String): BaseRes<LoginBean>
+
+    @GET("/user/lg/userinfo/json")
+    suspend fun userInfo(): BaseRes<UserInfoData>
 }

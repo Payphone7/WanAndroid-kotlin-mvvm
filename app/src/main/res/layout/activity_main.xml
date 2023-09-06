@@ -43,6 +43,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"/>
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:clipChildren="false"
             android:id="@+id/bottomNavigationView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

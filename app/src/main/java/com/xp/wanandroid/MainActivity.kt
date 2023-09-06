@@ -9,6 +9,7 @@ import com.dycw.base.fragment.adapter.FragmentLazyPagerAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.wanandroid.xp_commom.base.BaseActivity
 import com.wanandroid.xp_home.fragment.HomeFragment
+import com.wanandroid.xp_mine.ui.MineFragment
 import com.wanandroid.xp_navigation.ui.NaviFragment
 import com.wanandroid.xp_project.ui.ProjectFragment
 import com.xp.wanandroid.databinding.ActivityMainBinding
@@ -20,7 +21,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         HomeFragment(),
         ProjectFragment(),
         NaviFragment(),
-        HomeFragment()
+        MineFragment()
     )
 
     private val pagerAdapter : FragmentLazyPagerAdapter by lazy {

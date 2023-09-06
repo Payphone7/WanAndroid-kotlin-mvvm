@@ -21,6 +21,10 @@
     <color name="theme_color">#227bfa</color>
 
     <color name="color_4dffffff">#4dffffff</color>
+    <color name="color_333333">#333333</color>
+    <color name="item_line">@color/color_80999999</color>
+    <color name="color_80999999">#80999999</color>
+
 </resources>
 
     <!--

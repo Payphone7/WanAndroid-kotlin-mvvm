@@ -6,6 +6,7 @@ import com.wanandroid.xp_commom.network.ResLiveData
 import com.wanandroid.xp_commom.network.RetrofitManager
 import com.wanandroid.xp_mine.api.UserApi
 import com.wanandroid.xp_mine.bean.LoginBean
+import com.wanandroid.xp_room.bean.UserInfoData
 
 /**
  * Created by stew on 8/21/22.
@@ -13,11 +14,17 @@ import com.wanandroid.xp_mine.bean.LoginBean
  */
 class LoginRepo() : BaseRepository() {
 
-   private val api = RetrofitManager.instance.getService(UserApi::class.java)
+    private val api = RetrofitManager.instance.getService(UserApi::class.java)
 
     suspend fun login(username: String, password: String, data: ResLiveData<LoginBean>) =
         dealResponse(
             block = { api.login(username, password) }, data
         )
 
+
+    suspend fun userInfo(data: ResLiveData<UserInfoData>) {
+        dealResponse(
+            { api.userInfo() }, data
+        )
+    }
 }
