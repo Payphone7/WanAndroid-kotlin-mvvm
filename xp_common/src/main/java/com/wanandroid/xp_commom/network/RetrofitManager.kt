@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit
  * create time : 2023/8/29 11:48
  * create by : xupengpeng
  */
-class RetrofitManager {
+class RetrofitManager private constructor(){
 
     companion object {
         val instance: RetrofitManager by lazy(LazyThreadSafetyMode.SYNCHRONIZED) {

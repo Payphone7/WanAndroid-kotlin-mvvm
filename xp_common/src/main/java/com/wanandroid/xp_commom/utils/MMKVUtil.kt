@@ -7,7 +7,7 @@ import com.tencent.mmkv.MMKV
  * create time : 2023/8/29 11:55
  * create by : xupengpeng
  */
-class MMKVUtil {
+class MMKVUtil private constructor(){
     companion object{
         val instance : MMKVUtil by lazy(LazyThreadSafetyMode.SYNCHRONIZED) {
             MMKVUtil()

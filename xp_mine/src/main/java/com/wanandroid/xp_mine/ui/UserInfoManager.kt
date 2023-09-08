@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData
  * create time : 2023/9/5 16:18
  * create by : xupengpeng
  */
-class UserInfoManager {
+class UserInfoManager private constructor(){
     companion object {
         val instance by lazy(LazyThreadSafetyMode.SYNCHRONIZED) {
             UserInfoManager()
