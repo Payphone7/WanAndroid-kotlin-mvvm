@@ -7,6 +7,7 @@ import com.alibaba.android.arouter.facade.callback.NavigationCallback
 import com.alibaba.android.arouter.launcher.ARouter
 import com.dycw.xp_home.bean.ArticleBean
 import com.dycw.xp_home.bean.BannerBean
+import com.elvishew.xlog.XLog
 import com.scwang.smart.refresh.layout.api.RefreshLayout
 import com.scwang.smart.refresh.layout.listener.OnRefreshLoadMoreListener
 import com.wanandroid.xp_commom.base.BaseFragment
@@ -41,8 +42,14 @@ open class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
         mBinding.refreshLayout.setOnRefreshLoadMoreListener(object : OnRefreshLoadMoreListener {
             override fun onRefresh(refreshLayout: RefreshLayout) {
-                currentPage = 0
-                mViewModel.getArticle(currentPage)
+                try {
+                    throw NullPointerException("TestThrowable")
+                    currentPage = 0
+                    mViewModel.getArticle(currentPage)
+                }catch (e : Exception){
+                    XLog.d("11111111111")
+                }
+
             }
 
             override fun onLoadMore(refreshLayout: RefreshLayout) {

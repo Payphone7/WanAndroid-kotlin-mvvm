@@ -104,7 +104,7 @@ dependencies {
 
 
 
-
+    implementation 'com.elvishew:xlog:1.10.1'
 
 
 

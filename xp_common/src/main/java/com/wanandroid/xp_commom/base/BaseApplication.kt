@@ -7,6 +7,7 @@ import android.util.Log
 import com.alibaba.android.arouter.launcher.ARouter
 import com.tencent.mmkv.MMKV
 import com.wanandroid.xp_commom.utils.ToastUtil
+import com.wanandroid.xp_commom.utils.XLogUtils
 
 /**
  * Author by xupengpeng
@@ -23,6 +24,11 @@ open class BaseApplication : Application() {
         registerActivityLifecycleCallbacks()
         initToast()
         initMMKV()
+        initXlog()
+    }
+
+    private fun initXlog(){
+        XLogUtils.instance.init()
     }
 
     private fun initMMKV() {
@@ -32,6 +38,8 @@ open class BaseApplication : Application() {
     private fun initToast() {
         ToastUtil.instance.init(this)
     }
+
+
 
     private fun registerActivityLifecycleCallbacks() {
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
