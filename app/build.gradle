@@ -7,15 +7,32 @@ android {
         applicationId "com.xp.wanandroid"
     }
 
+    signingConfigs {
+        release {
+            storeFile file("../app/wanandroid.keystore")
+            storePassword "123456"
+            keyAlias "wanandroid"
+            keyPassword "123456"
+        }
+
+        debug {
+            storeFile file("../app/wanandroid.keystore")
+            storePassword "123456"
+            keyAlias "wanandroid"
+            keyPassword "123456"
+        }
+    }
+
     buildTypes {
         debug{
+            signingConfig signingConfigs.debug
             minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         release {
-            //signingConfig signingConfigs.release
-            minifyEnabled false
+            signingConfig signingConfigs.release
+            minifyEnabled true
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
